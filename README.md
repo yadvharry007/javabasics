@@ -1,2 +1,2 @@
 # javabasics
-Basic Problem Solving
+Basic Problem Solving - Palindrome check
