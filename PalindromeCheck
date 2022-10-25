@@ -1,0 +1,30 @@
+public class PalindromeCheck {
+
+    public static void main(String[] args) {
+    System.out.println("Hello, World! Program for checking palindrme with optimum time and space complexity");
+        
+    String input = "madam";
+    
+    try{
+          boolean result = isPalindrome(input);
+          System.out.println("Test: "+ result);
+      }catch(Exception e){
+              System.out.println("Exception caught: "+e.getMessage());
+      }
+    
+    }
+    
+    static boolean isPalindrome(String input) throws Exception{
+    if(null == input || "" ==input || input.length() == 1)
+      throw new RuntimeException("Invalid input");
+    
+    //Just iterating half of the length of the String 
+    for(int i=0;i< input.length()/2;i++){
+      if(input.charAt(i) != input.charAt(input.length()-1-i)){
+      return false;
+      }
+      else return true;
+    }
+    return false;
+  }
+}
