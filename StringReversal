@@ -1,0 +1,22 @@
+class StringReversal {
+    public static void main(String[] args) {
+    String input = "shri ram shri";
+    try{
+        String result = reverse(input).toString();
+        System.out.println("Reversed String: "+ result);
+    }catch(Exception e){
+            System.out.println("Exception caught: "+e.getMessage());
+    }
+    }
+    
+    static String reverse(String input) throws Exception{
+    if(null == input || input == "")
+     throw new RuntimeException("Invalid input");
+     
+    StringBuilder sb = new StringBuilder();
+    for(int i=input.length()-1; i>=0 ; i--){
+     sb.append(input.charAt(i));
+    }
+    return sb.toString();
+  }
+}
